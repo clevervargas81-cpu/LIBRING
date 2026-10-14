@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar - Jose Clemente Maurer</title>
+    <style>
+        /* Estilos Generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #1e3a8a; /* Azul Marino */
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navegación Izquierda */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #60a5fa; /* Azul claro al pasar el cursor */
+        }
+
+        /* Nombre e Icono Derecha */
+        .header-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-info h1 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Contenido Principal */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .titles-container {
+            text-align: right; /* Alineado a la derecha */
+            margin-bottom: 30px;
+        }
+
+        .titles-container h2 {
+            font-size: 2.2rem;
+            color: #1e293b;
+        }
+
+        .titles-container p {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-top: 5px;
+        }
+
+        /* Grid de los Cuadros de Control */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Estilo Base de los Cuadros */
+        .card {
+            border-radius: 12px;
+            padding: 25px;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .card .text {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* Colores Individuales para cada Cuadro */
+        .card-estudiantes {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* Azul */
+        }
+
+        .card-docentes {
+            background: linear-gradient(135deg, #10b981, #047857); /* Verde */
+        }
+
+        .card-materias {
+            background: linear-gradient(135deg, #f59e0b, #b45309); /* Naranja */
+        }
+
+        .card-promedio {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* Morado */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <!-- Navegación a la izquierda -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#estudiantes">Estudiantes</a></li>
+                <li><a href="#maestros">Maestros</a></li>
+                <li><a href="#materias">Materias</a></li>
+                <li><a href="#kardex">Kardex</a></li>
+            </ul>
+        </nav>
+
+        <!-- Información a la derecha -->
+        <div class="header-info">
+            <!-- Icono de graduación usando un Emoji nativo -->
+            <span style="font-size: 1.5rem;">🎓</span>
+            <h1>Jose Clemente Maurer</h1>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Títulos alineados a la derecha -->
+        <div class="titles-container">
+            <h2>Panel de Control</h2>
+            <p>Gestión académica del periodo escolar 2026</p>
+        </div>
+
+        <!-- Cuadros Informativos -->
+        <section class="dashboard-grid">
+            <div class="card card-estudiantes">
+                <span class="number">400</span>
+                <span class="text">Estudiantes matriculados</span>
+            </div>
+
+            <div class="card card-docentes">
+                <span class="number">25</span>
+                <span class="text">Docentes activos</span>
+            </div>
+
+            <div class="card card-materias">
+                <span class="number">15</span>
+                <span class="text">Materias dictadas</span>
+            </div>
+
+            <div class="card card-promedio">
+                <span class="number">7.5</span>
+                <span class="text">Promedio general</span>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

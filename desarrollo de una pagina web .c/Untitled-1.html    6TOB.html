@@ -1,0 +1,270 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <titl>| Tu espacio de libros electrónicos favoritos </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary:'#000000',
+                        dark: '#0000FF',
+                        light: '#7093DB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-white">
+    <!-- Encabezado y Navegación -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i class="fa fa-book text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-dark">LIBROS AL INSTANTE</span>
+            </div>
+            
+            <!-- Navegación escritorio -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="font-medium hover:text-primary transition-colors">°Inicio</a>
+                <a href="#catalogo" class="font-medium hover:text-primary transition-colors">°Catálogo</a>
+                <a href="#beneficios" class="font-medium hover:text-primary transition-colors">°Ventajas</a>
+                <a href="#contacto" class="font-medium hover:text-primary transition-colors">°Contacto</a>
+            </nav>
+
+            <button class="md:hidden text-dark text-xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sección Principal -->
+    <section id="inicio" class="bg-gradient-to-r from-primary/10 to-secondary/10 py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2 space-y-6">
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-balance">
+                        Descubre el conocimiento al alcance de tus manos con nuestros libros electrónicos ya que son seguros y ficil de obtener 
+                    </h1>
+                    <p class="text-lg text-gray-600 text-balance">
+                        Accede a una amplia colección de títulos de diferentes géneros, en formatos compatibles con todos tus dispositivos. Compra, descarga y lee de inmediato, en cualquier momento y lugar.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-3">
+                        <a href="#catalogo" class="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg transition-colors shadow-md">
+                            Ver catálogo
+                        </a>
+                        <a href="#beneficios" class="bg-white hover:bg-gray-50 text-dark font-medium py-3 px-8 rounded-lg border border-gray-200 transition-colors shadow-sm">
+                            Saber más
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="images.jpg" width="300px" alt="300px"
+                         alt="Libros electrónicos en diferentes dispositivos" 
+                         class="rounded-xl shadow-lg max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Libros -->
+    <section id="catalogo" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-bold mb-3">Catálogo de Libros Electrónicos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-balance">
+                    Tenemos títulos de ficción, desarrollo personal, negocios, tecnología, educación y mucho más. Todos los archivos se entregan en formatos compatibles: EPUB, MOBI y PDF.
+                </p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-medium">Todos</button>
+                <button class="px-5 py-2 rounded-full bg-white hover:bg-gray-100 text-dark text-sm font-medium border border-gray-200 transition-colors">Ficción</button>  
+                <button class="px-5 py-2 rounded-full bg-white hover:bg-gray-100 text-dark text-sm font-medium border border-gray-200 transition-colors">Negocios</button>
+                <button class="px-5 py-2 rounded-full bg-white hover:bg-gray-100 text-dark text-sm font-medium border border-gray-200 transition-colors">Tecnología</button>
+                <button class="px-5 py-2 rounded-full bg-white hover:bg-gray-100 text-dark text-sm font-medium border border-gray-200 transition-colors">Educación</button>
+            </div>
+
+            <!-- Lista de productos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Libro 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
+                    <div class="h-[320px] overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Portada libro 1" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">Negocios</span>
+                        <h3 class="text-lg font-bold">Estrategias del Éxito</h3>
+                        <p class="text-sm text-gray-600 line-clamp-2">Aprende las claves para construir proyectos sólidos y alcanzar tus metas profesionales de manera efectiva.</p>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xl font-bold text-dark"> 89.0 Bs</span>
+                            <button class="bg-primary hover:bg-primary/90 text-white text-sm py-2 px-4 rounded transition-colors">
+                                Comprar ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Libro 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
+                    <div class="h-[320px] overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Portada libro 2" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">Desarrollo Personal</span>
+                        <h3 class="text-lg font-bold">Mente y Equilibrio</h3>
+                        <p class="text-sm text-gray-600 line-clamp-2">Descubre técnicas para gestionar tus emociones, reducir el estrés y vivir con mayor plenitud y bienestar.</p>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xl font-bold text-dark">77.99Bs</span>
+                            <button class="bg-primary hover:bg-primary/90 text-white text-sm py-2 px-4 rounded transition-colors">
+                                Comprar ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Libro 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
+                    <div class="h-[320px] overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Portada libro 3" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">Tecnología</span>
+                        <h3 class="text-lg font-bold">Guía de Programación</h3>
+                        <p class="text-sm text-gray-600 line-clamp-2">Todo lo que necesitas saber para iniciarte en el mundo de la programación, con ejemplos prácticos y lenguajes actuales.</p>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xl font-bold text-dark">45.20Bs</span>
+                            <button class="bg-primary hover:bg-primary/90 text-white text-sm py-2 px-4 rounded transition-colors">
+                                Comprar ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Libro 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
+                    <div class="h-[320px] overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Portada libro 4" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">Ficción</span>
+                        <h3 class="text-lg font-bold">El Viaje Infinito</h3>
+                        <p class="text-sm text-gray-600 line-clamp-2">Una historia apasionante que te llevará por mundos imaginarios, llena de misterio, aventura y personajes inolvidables.</p>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xl font-bold text-dark">99Bs</span>
+                            <button class="bg-primary hover:bg-primary/90 text-white text-sm py-2 px-4 rounded transition-colors">
+                                Comprar ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ <!-- Libro 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
+                    <div class="h-[320px] overflow-hidden bg-gray-100">
+                        <img src="principitoc.jpg" 
+                             alt="Portada libro 3" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">Tecnología</span>
+                        <h3 class="text-lg font-bold">EL PRINCIPITO </h3>
+                        <p class="text-sm text-gray-600 line-clamp-2">En una sola frase, la portada transmite la profunda soledad del ser humano mitigada por la pureza, la imaginación y la nostalgia de la infancia ante la inmensidad del universo.
+
+                        </p>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xl font-bold text-dark">69.20Bs</span>
+                            <button class="bg-primary hover:bg-primary/90 text-white text-sm py-2 px-4 rounded transition-colors">
+                                Comprar ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+    <!-- Ventajas -->
+    <section id="beneficios" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-bold mb-3">¿Por qué elegir nuestros libros electrónicos?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-balance">
+                    Disfruta de todas las ventajas del formato digital y accede a tu lectura cuando y donde quieras.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-xl bg-light/50">
+                    <div class="w-16 h-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-5 text-2xl">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Acceso Inmediato</h3>
+                    <p class="text-gray-600">En cuanto realices tu compra, recibirás los archivos listos para descargar. No tendrás que esperar envíos ni tiempos de entrega.</p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-light/50">
+                    <div class="w-16 h-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-5 text-2xl">
+                        <i class="fa fa-laptop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Compatible con Todo</h3>
+                    <p class="text-gray-600">Nuestros archivos funcionan en lectores de libros electrónicos, tabletas, teléfonos móviles y computadoras. Ajusta el tamaño de letra y la lectura a tu gusto.</p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-light/50">
+                    <div class="w-16 h-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-5 text-2xl">
+                        <i class="fa fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Amigable con el Medio Ambiente</h3>
+                    <p class="text-gray-600">Al elegir formato digital reduces el consumo de papel y recursos naturales, contribuyendo al cuidado del planeta sin renunciar al placer de leer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm p-8 md:p-10">
+                <div class="text-center mb-8">
+                    <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold mb-3">¿Tienes alguna duda o consulta?</h2>
+                    <p class="text-gray-600">Escríbenos y te responderemos lo antes posible.</p>
+                </div>
+
+                <form class="space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
+                            <input type="text" id="nombre" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label for="correo" class="block text-sm font-medium text-gray-700

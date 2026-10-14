@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro </title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+background-image: url(""); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:0;
+    padding:20px;
+}
+
+.registro-contenedor{
+    width:400px;
+    margin:auto;
+    background:#B22222;
+    padding:25px;
+    border-radius:5px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+.grupo-formulario{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:5px;
+    color:#DAA520;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #CCC;
+    border-radius:4px;
+    box-sizing:border-box;
+    font-size:15px;
+    background-color: white;
+    color: black;
+}
+
+textarea{
+    resize:none;
+    height:100px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#B22222;
+    color:white;
+    border:none;
+    border-radius:4px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#DAA520;
+}
+</style>
+
+</head>
+<body>
+
+<div class="registro-contenedor">
+
+    <h2>Registro</h2>
+
+    <form>
+
+        <div class="grupo-formulario">
+            <label>Nombre y Apellido:</label>
+            <input type="text" placeholder="Ingrese su nombre y Apellido" required>
+        </div>
+  <div class="grupo-formulario">
+            <label>C.I:</label>
+            <input type="cedula deidentidad" placeholder="Ingrese su C.I" required>
+       
+     
+        <div class="grupo-formulario">
+            <label>Género:</label>
+            <select required>
+                <option>Masculino</option>
+                <option>Femenino</option>
+                <option>otro</option>
+            </select>
+        </div>
+
+
+  <div class="grupo-formulario">
+            <label>Fecha de nacimiento:</label>
+            <input type="fecha de nacimiento" placeholder="Ingrese su Fecha de nacimiento" required>
+        </div>
+
+  <div class="grupo-formulario">
+            <label>Edad:</label>
+            <input type="edad" placeholder="Ingrese su edad" required>
+        </div>
+
+  <div class="grupo-formulario">
+            <label>ciudad:</label>
+            <input type="ciudad" placeholder="Ingrese la ciudad en la que se encuentra" required>
+        </div>
+
+  <div class="grupo-formulario">
+            <label>Pais:</label>
+            <input type="pais" placeholder="Ingrese el pais donde vive" required>
+        </div>
+        </div>
+        <div class="grupo-formulario">
+            <label>Correo:</label>
+            <input type="email" placeholder="Ingrese su correo" required>
+        </div>
+
+     <div class="grupo-formulario">
+            <label>Nombre o Nick:</label>
+            <input type="nombre o nick" placeholder="Ingrese su Nombre o Nick" required>
+</div>
+
+  <div class="grupo-formulario">
+            <label>contraseña:</label>
+            <input type="password" required>
+        </div>
+
+      
+
+        <button type="submit">registrado</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

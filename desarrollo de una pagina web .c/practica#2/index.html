@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+
+<title>Mi Página</title>
+
+<style>
+
+body{
+ margin: 0;
+ background-color:springgreen;
+    
+}
+
+/* cuadro verde */
+.contenedor{
+    width:60%;
+    min-height:100vh;
+    background:darkolivegreen;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+/* imágenes */
+.imagenes{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+}
+
+/* cuando cambia */
+.horizontal{
+
+    flex-direction:row;
+
+    justify-content:center;
+    
+}
+
+/* tamaño imágenes */
+img{
+    width:220px ;
+
+    height: 200px;
+}
+
+/* botón */
+button{
+    padding:10px 20px;
+
+    margin:20px;
+
+    cursor:pointer;
+}
+.horizontal .texto2{
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1>Gracias por visitarme</h1>
+    <h1>registro de estudiante</h1>
+
+<p style="text-align: left;"> <a href="file:///C:/clever%20proyecto/clever%203/clever%202/desarrollo%20de%20una%20pagina%20web%20.c/practica%232/REGISTRO.html" >REGISTRO</a> 
+
+<p style="text-align: left;">A continuacion los escudos del colegio y del pais.</p>
+
+
+
+</body>
+</html>
+
+    
+    <h4 style="text-align: left;"> Escudo de Bolivia</h4>
+    <button onclick="cambiar()" id="boton">
+        Hide  
+    </button>
+    
+    <div class="imagenes" id="imgs">
+
+        <img src="bolivia.jpg">
+<h4 class="texto2"> Escudo de la U.E.: Jose Clemente Maurer</h4>
+        <img src="jcm.jpg">
+
+    </div>
+
+</div>
+
+<script>
+
+function cambiar(){
+
+    let caja = document.getElementById("imgs");
+
+    let boton = document.getElementById("boton");
+
+    caja.classList.toggle("horizontal");
+
+    if(caja.classList.contains("horizontal")){
+
+        boton.innerHTML = "Toggle";
+
+    }else{
+
+        boton.innerHTML = "Hide";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

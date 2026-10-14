@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title><img src="BUO.png" width="50px" alt="50px">Colegio José Clemente Maure - Promoción 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azulOscuro: '#0A3B80',
+                        azulMedio: '#16509E',
+                        rojoOscuro: '#992E36',
+                        dorado: '#F2C961',
+                        textoAzul: '#B8D1F5',
+                        fondoGrad1: '#0F3472',
+                        fondoGrad2: '#1A2A5C',
+                    },
+                    fontFamily: {
+                        serif: ['Times New Roman', 'serif'],
+                        sans: ['Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .bg-azul-grad {
+                background: linear-gradient(180deg, #0F3472 0%, #1A2A5C 100%);
+            }
+            .bg-lema-grad {
+                background: linear-gradient(90deg, #992E36 0%, #0F3472 100%);
+            }
+            .text-dorado {
+                color: #F2C961;
+            }
+            .borde-dorado {
+                border: 1px solid #F2C961;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-white bg-azul-grad min-h-screen">
+
+    <!-- Barra de navegación -->
+    <nav class="fixed w-full top-0 bg-black/30 backdrop-blur-sm py-3 px-6 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <span class="text-dorado font-serif text-lg font-semibold">PROMO SHANHET 2026</span>
+            <div class="flex gap-8">
+                <a href="#inicio" class="text-textoAzul hover:text-dorado transition">INICIO</a>
+                <a href="#nosotros" class="text-textoAzul hover:text-dorado transition">NOSOTROS</a>
+                <a href="#lema" class="text-textoAzul hover:text-dorado transition">LEMA</a>
+                <a href="#galeria" class="text-textoAzul hover:text-dorado transition">GALERÍA</a>
+                <a href="#cuenta" class="text-textoAzul hover:text-dorado transition">CUENTA</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección 1: Inicio -->
+    <section id="inicio" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 bg-azul-grad">
+        <div class="mb-6 px-6 py-1 borde-dorado rounded-full bg-white/5">
+            <p class="text-dorado text-sm">AZARI • CHUQUISACA • SUCRE</p>
+        </div>
+        <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-serif font-bold text-white mb-3">COLEGIO</h1>
+        <h2 class="text-[clamp(3rem,7vw,5rem)] font-serif font-bold text-dorado mb-4">JOSÉ CLEMENTE MAURE</h2>
+        <p class="text-[clamp(4rem,9vw,6rem)] font-serif font-bold text-white">2026</p>
+        <div class="w-32 h-0.5 bg-dorado/60 my-6 relative">
+            <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-dorado"></div>
+        </div>
+        <p class="text-textoAzul text-lg italic mb-8">¡La Promoción que dejará huella para siempre!</p>
+        <button class="px-8 py-2 borde-dorado rounded-full bg-white/5 text-dorado hover:bg-dorado/20 transition">
+            CONOCE NUESTRA HISTORIA
+        </button>
+    </section>
+
+    <!-- Sección 2: Quiénes Somos -->
+    <section id="nosotros" class="min-h-screen flex flex-col items-center justify-center px-4 py-16 bg-azul-grad">
+        <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-serif font-bold text-dorado mb-4">QUIÉNES SOMOS</h2>
+        <p class="text-textoAzul text-lg mb-12">Una generación unida por el conocimiento, los valores y la amistad</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl w-full">
+            <!-- Tarjeta 1 -->
+            <div class="bg-azulMedio/40 borde-dorado rounded-xl p-6 text-center">
+                <i class="fa-solid fa-graduation-cap text-dorado text-3xl mb-4"></i>
+                <h3 class="text-dorado font-serif font-bold text-xl mb-3">NUESTRA INSTITUCIÓN</h3>
+                <p class="text-textoAzul text-sm leading-relaxed">
+                    El Colegio José Clemente Maure de la comunidad de Azari, en el departamento de Chuquisaca, Bolivia, ha formado generaciones de jóvenes comprometidos con su comunidad.
+                </p>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="bg-azulMedio/40 borde-dorado rounded-xl p-6 text-center">
+                <i class="fa-solid fa-star text-dorado text-3xl mb-4"></i>
+                <h3 class="text-dorado font-serif font-bold text-xl mb-3">LA PROMOCIÓN 2026</h3>
+                <p class="text-textoAzul text-sm leading-relaxed">
+                    Somos la generación que culmina su etapa escolar en 2026, listos para enfrentar los desafíos del futuro con preparación, valores y entusiasmo.
+                </p>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="bg-azulMedio/40 borde-dorado rounded-xl p-6 text-center">
+                <i class="fa-solid fa-mountain-sun text-dorado text-3xl mb-4"></i>
+                <h3 class="text-dorado font-serif font-bold text-xl mb-3">NUESTRA TIERRA</h3>
+                <p class="text-textoAzul text-sm leading-relaxed">
+                    Orgullosos de nuestras raíces chuquisaqueñas, llevamos en el corazón la riqueza cultural e histórica de Sucre, la Ciudad Blanca de Bolivia.
+                </p>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="bg-azulMedio/40 borde-dorado rounded-xl p-6 text-center">
+                <i class="fa-solid fa-heart text-dorado text-3xl mb-4"></i>
+                <h3 class="text-dorado font-serif font-bold text-xl mb-3">UNIDOS PARA SIEMPRE</h3>
+                <p class="text-textoAzul text-sm leading-relaxed">
+                    Años de estudio, risas y sacrificio nos forjaron como una familia. El vínculo de esta promoción es indestructible más allá del tiempo y la distancia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Nuestro Lema -->
+    <section id="lema" class="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-lema-grad">
+        <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-serif font-bold text-dorado mb-10">NUESTRO LEMA</h2>
+        <blockquote class="text-[clamp(1.3rem,3vw,2.2rem)] text-white max-w-4xl mx-auto leading-relaxed italic mb-8">
+            “El conocimiento es la llama que ilumina el camino; la amistad, el fuego que calienta el alma”
+        </blockquote>
+        <p class="text-dorado text-sm">— PROMOCIÓN 2026 • JOSÉ CLEMENTE MAURE</p>
+    </section>
+
+    <!-- Sección 4: Momentos Inolvidables -->
+    <section id="galeria" class="min-h-screen flex flex-col items-center justify-center px-4 py-16 bg-azul-grad">
+        <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-serif font-bold text-dorado mb-4">MOMENTOS INOLVIDABLES</h2>
+        <p class="text-textoAzul text-lg mb-12">Recuerdos que vivirán por siempre en nuestros corazones</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 max-w-5xl w-full">
+            <div class="bg-blue-600/80 rounded-lg h-28 md:h-36 flex items-center justify-center text-white text-3xl shadow-md">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="bg-red-800/80 rounded-lg h-28 md:h-36 flex items-center justify-center text-white text-3xl shadow-md">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="bg-green-700/80 rounded-lg h-28 md:h-36 flex items-center justify-center text-white text-3xl shadow-md">
+                <i class="fa-solid fa-futbol-ball"></i>
+            </div>
+            <div class="bg-amber-900/80 rounded-lg h-28 md:h-36 flex items-center justify-center text-white text-3xl shadow-md">
+                <i class="fa-solid fa-masks-theater"></i>
+            </div>
+            <div class="bg-green-600/80 rounded-lg h-28 md:h-36 flex items-center justify-center text-white text-3xl shadow-md">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="bg-purple-800/80 rounded-lg h-28 md:h-36 flex items-center justify-center text-white text-3xl shadow-md">
+                <i class="fa-solid fa-party-popper"></i>
+            </div>
+            <div class="bg-gray-800/80 rounded-lg h-28 md:h-36 flex items-center justify-center text-white text-3xl shadow-md">
+                <i class="fa-solid fa-pencil"></i>
+            </div>
+            <div class="bg-cyan-700/80 rounded-lg h-28 md:h-36 flex items-center justify-center text-white text-3xl shadow-md">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 5: Cuenta Regresiva FUNCIONAL -->
+    <section id="cuenta" class="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-azul-grad">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-dorado mb-3">CUENTA PARA ABANDONAR EL COLEGIO</h2>
+        <p class="text-textoAzul text-lg mb-10">Días para ingresar a la universidad 2026</p>
+
+        <!-- CRONÓMETRO EN TIEMPO REAL -->
+        <div class="flex justify-center gap-4 md:gap-6 mb-8">
+            <div class="borde-dorado rounded-lg px-5 py-3 bg-white/5">
+                <p id="dias" class="text-3xl md:text-4xl font-serif font-bold text-dorado">000</p>
+                <p class="text-textoAzul text-xs mt-1">DÍAS</p>
+            </div>
+            <div class="borde-dorado rounded-lg px-5 py-3 bg-white/5">
+                <p id="horas" class="text-3xl md:text-4xl font-serif font-bold text-dorado">00</p>
+                <p class="text-textoAzul text-xs mt-1">HORAS</p>
+            </div>
+            <div class="borde-dorado rounded-lg px-5 py-3 bg-white/5">
+                <p id="minutos" class="text-3xl md:text-4xl font-serif font-bold text-dorado">00</p>
+                <p class="text-textoAzul text-xs mt-1">MINUTOS</p>
+            </div>
+            <div class="borde-dorado rounded-lg px-5 py-3 bg-white/5">
+                <p id="segundos" class="text-3xl md:text-4xl font-serif font-bold text-dorado">00</p>
+                <p class="text-textoAzul text-xs mt-1">SEGUNDOS</p>
+            </div>
+        </div>
+
+        <p class="text-textoAzul text-sm mb-12 flex items-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-dorado"></i> Ceremonia de Graduación • Noviembre 2026
+        </p>
+
+        <div class="w-full h-0.5 bg-dorado/20 mb-10"></div>
+
+        <h3 class="text-dorado font-serif font-bold text-xl mb-3">COLEGIO JOSÉ CLEMENTE MAURE DE AZARI</h3>
+        <p class="text-textoAzul text-base mb-2">Azari - Departamento de Chuquisaca - Sucre, Bolivia</p>
+        <p class="text-dorado text-sm flex items-center gap-2">
+            <span>◆</span> Promoción 2026 - Forjados con esfuerzo, graduados con orgullo <span>◆</span>
+        </p>
+    </section>
+
+    <!-- Código para que el cronómetro funcione -->
+    <script>
+        // FECHA DE GRADUACIÓN: Noviembre de 2026 (puedes cambiarla si es otra fecha exacta)
+        const fechaGraduacion = new Date("November 15, 2026 00:00:00").getTime();
+
+        const actualizarCronometro = () => {
+            const ahora = new Date().getTime();
+            const distancia = fechaGraduacion - ahora;
+
+            // Cálculos de tiempo
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            // Mostrar valores con ceros a la izquierda
+            document.getElementById("dias").innerText = dias.toString().padStart(3, '0');
+            document.getElementById("horas").innerText = horas.toString().padStart(2, '0');
+            document.getElementById("minutos").innerText = minutos.toString().padStart(2, '0');
+            document.getElementById("segundos").innerText = segundos.toString().padStart(2, '0');
+
+            // Si ya pasó la fecha
+            if (distancia < 0) {
+                clearInterval(intervalo);
+                document.getElementById("dias").innerText = "000";
+                document.getElementById("horas").innerText = "00";
+                document.getElementById("minutos").innerText = "00";
+                document.getElementById("segundos").innerText = "00";
+            }
+        };
+
+        // Actualizar cada segundo
+        const intervalo = setInterval(actualizarCronometro, 1000);
+        actualizarCronometro(); // Ejecutar inmediatamente al cargar
+    </script>
+
+</body>
+</html>
